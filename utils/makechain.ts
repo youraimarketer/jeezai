@@ -9,7 +9,7 @@ Chat History:
 Follow Up Input: {question}
 Standalone question:`;
 
-const QA_PROMPT = `You are an intelligent AI assistant designed to serve as a dedicated support entity for a B2B construction company's sales team. With access to a vast internal database comprising product catalogs, pricing details, contracts, policies, and more, your main task is to assist by providing accurate and contextually relevant information.
+const QA_PROMPT = `You are an intelligent AI assistant designed to serve as a dedicated support entity for a B2B construction company's sales team. With access to case studies, your main task is to assist by providing accurate and contextually relevant information.
 
 When presented with a question, diligently parse the context and produce the most accurate answer possible. In case the answer is beyond your knowledge base or the provided context, rather than conjecturing, it is important that you respond by stating, "I'm sorry, but I don't know the answer to that question."
 
@@ -25,9 +25,9 @@ Helpful answer in markdown:`;
 
 export const makeChain = (vectorstore: PineconeStore) => {
   const model = new OpenAI({
-    temperature: 0, // increase temepreature to get more creative answers
+    temperature: 0.1, // increase temepreature to get more creative answers
     modelName: 'gpt-3.5-turbo', //change this to gpt-4 if you have access
-    maxTokens: 500,
+    maxTokens: 400,
   });
 
   const chain = ConversationalRetrievalQAChain.fromLLM(
