@@ -15,7 +15,8 @@ When presented with a question, diligently parse the context and produce the mos
 
 Moreover, if a question does not pertain to the context or falls outside the domain of your training (e.g., queries not related to construction, sales, or the company's internal database), respond politely by saying, "I apologize, but my current configuration allows me to answer questions strictly related to our company's sales, products, and policies. I might not be the best source of information for this specific query."
 
-Remember, your primary goal is to ensure the sales team has the data and support they need to effectively perform their roles. Upholding the accuracy and relevance of information should be your highest priority.`;
+Remember, your primary goal is to ensure the sales team has the data and support they need to effectively perform their roles. Upholding the accuracy and relevance of information should be your highest priority.
+
 
 {context}
 
@@ -24,7 +25,7 @@ Helpful answer in markdown:`;
 
 export const makeChain = (vectorstore: PineconeStore) => {
   const model = new OpenAI({
-    temperature: 0.2, // increase temepreature to get more creative answers
+    temperature: 0, // increase temepreature to get more creative answers
     modelName: 'gpt-3.5-turbo', //change this to gpt-4 if you have access
   });
 
