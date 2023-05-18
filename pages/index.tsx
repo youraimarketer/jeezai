@@ -25,7 +25,7 @@ export default function Home() {
   }>({
     messages: [
       {
-        message: 'I am here to close that deal! What do you need?',
+        message: 'Hey teammate! I am here help you on questions related with our case studies. What do you need?',
         type: 'apiMessage',
       },
     ],
@@ -125,7 +125,7 @@ export default function Home() {
       <Layout>
         <div className="mx-auto flex flex-col gap-4">
           <h1 className="text-2xl font-bold leading-[1.1] tracking-tighter text-center">
-            AI Sales Team Assistant
+            AI Internal Marketing/Sales Team Assistant
           </h1>
           <main className={styles.main}>
             <div className={styles.cloud}>
@@ -224,7 +224,7 @@ export default function Home() {
                     placeholder={
                       loading
                         ? 'Waiting for response...'
-                        : 'I need positive revenue metrics to impress this ecommerce brand from US.'
+                        : 'I want to see some examples on how HVAC companies uses Jonas Documents.'
                     }
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
@@ -261,8 +261,8 @@ export default function Home() {
           </main>
         </div>
         <footer className="m-auto p-4">
-          <a href="JeezAI | AI Internships">
-            JeezAI - May 2023 www.jeezai.com.
+          <a href="Muratcan Koylan">
+           Muratcan Koylan - Test bot for Jonas Construction Software
           </a>
         </footer>
       </Layout>
