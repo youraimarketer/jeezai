@@ -25,9 +25,9 @@ Helpful answer in markdown:`;
 
 export const makeChain = (vectorstore: PineconeStore) => {
   const model = new OpenAI({
-    temperature: 0.3, // increase temepreature to get more creative answers
-    modelName: 'gpt-4', //change this to gpt-4 if you have access
-    maxTokens: 300,
+    temperature: 0.1, // increase temepreature to get more creative answers
+    modelName: 'gpt-3.5-turbo', //change this to gpt-4 if you have access
+    maxTokens: 500,
   });
 
   const chain = ConversationalRetrievalQAChain.fromLLM(
